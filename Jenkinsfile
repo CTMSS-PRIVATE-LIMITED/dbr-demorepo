@@ -7,7 +7,7 @@ node {
   def JOBPREFIX     = "jenkins-demo"
   def BUNDLETARGET  = "dev"
 
-  stage('git branch Checkout') {
+  stage('Checkout') {
     git branch: GITBRANCH, url: GITREPOREMOTE
   }
   stage('Validate Bundle') {
