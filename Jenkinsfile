@@ -7,10 +7,10 @@ node {
   def JOBPREFIX     = "jenkins-demo"
   def BUNDLETARGET  = "dev"
 
-  stage('Checkout') {
+  stage(' Git Checkout') {
     git branch: GITBRANCH, url: GITREPOREMOTE
   }
-  stage('Validate Bundle') {
+  stage('Validate-Bundle') {
     sh """#!/bin/bash
           ${DBCLIPATH}/databricks bundle validate -t ${BUNDLETARGET}
        """
